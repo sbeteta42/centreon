@@ -31,53 +31,50 @@ sudo ./install_centreon.sh
 # 🔧 Configuration Post-Installation
 
 **Interface Web:** Accédez à http://[IP-SERVEUR]/centreon
-Utilisateur: admin
-Mot de passe: AdminPassword123!
+- Utilisateur: admin
+- Mot de passe: AdminPassword123!
 
-Base de données:
-Utilisateur root: root
-Mot de passe: MotDePasseSecurise123!
+**Base de données:**
+- Utilisateur root: root
+- Mot de passe: MotDePasseSecurise123!
 
 # 📖 Guide d'Utilisation
 1. Assistant Web
-Suivez l'assistant d'installation web avec les paramètres pré-configurés du script.
+- Suivez l'assistant d'installation web avec les paramètres pré-configurés du script.
 2. Export de Configuration
-Après ajout d'hôtes, exportez toujours la configuration :
+- Après ajout d'hôtes, exportez toujours la configuration :
 
-Configuration > Collecteurs > Collecteurs
-Sélectionner "Central" → "Exporter la configuration"
+- Configuration > Collecteurs > Collecteurs
+- Sélectionner "Central" → "Exporter la configuration"
 
 3. Supervision SNMP
-Le serveur est pré-configuré pour s'auto-superviser :
+- Le serveur est pré-configuré pour s'auto-superviser :
 
-Communauté SNMP: public
-Port: 161/UDP
+**Communauté SNMP:** public
+- Port: 161/UDP
 
-🛠️ Personnalisation
-Modifiez les variables en début de script :
+# 🛠️ Personnalisation
+_ Modifiez les variables en début de script :
+
 bashHOSTNAME="central"                          # Nom du serveur
 DB_ROOT_PASSWORD="VotreMotDePasse"         # Mot de passe MariaDB
 CENTREON_ADMIN_USER="admin"                # Utilisateur admin
 CENTREON_ADMIN_PASSWORD="VotrePassword"    # Mot de passe admin
-🔍 Vérification
-Vérifiez que tous les services sont actifs :
+
+# 🔍 Vérification
+- Vérifiez que tous les services sont actifs :
 bashsudo systemctl status apache2 mariadb centreon cbd centengine
-🚨 Sécurité
+
+# 🚨 Sécurité
 ⚠️ Important: Ce script désactive temporairement le pare-feu. Réactivez-le après installation :
+
 bashsudo systemctl enable ufw && sudo systemctl start ufw
 sudo ufw allow 80/tcp    # Interface web Centreon
 sudo ufw allow 161/udp   # SNMP
-📚 Documentation
 
-Documentation officielle Centreon
-Guide SNMP Linux
+# 📚 Documentation
+- Documentation officielle Centreon
+- Guide SNMP Linux
 
-🤝 Contribution
-Les contributions sont les bienvenues ! N'hésitez pas à :
-
-Signaler des bugs
-Proposer des améliorations
-Soumettre des pull requests
-
-📄 Licence
+# 📄 Licence
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
