@@ -1,16 +1,19 @@
 # 🖥️ Script d'Installation Autonome Centreon
+
 Un script Bash automatisé pour installer et configurer Centreon sur Debian 12 avec MariaDB local.
 
-# 📋 Prérequis
+## 📋 Prérequis
 
-- **OS:** Debian 12 (Bookworm)
-- **RAM:** Minimum 1 GB recommandé
-- **Espace disque:** Au moins 20 GB libres
-- **Accès:** Privilèges sudo ou root
-- **Réseau:** Connexion Internet active
+- **OS**: Debian 12 (Bookworm)
+- **RAM**: Minimum 4 GB recommandés
+- **Espace disque**: Au moins 20 GB libres
+- **Accès**: Privilèges sudo
+- **Réseau**: Connexion Internet active
 
-# 🚀 Installation Rapide
+## 🚀 Installation Rapide
 
+```bash
+# Télécharger le script
 wget https://raw.githubusercontent.com/[votre-username]/centreon-auto-install/main/install_centreon.sh
 
 # Rendre exécutable
@@ -18,8 +21,9 @@ chmod +x install_centreon.sh
 
 # Lancer l'installation
 sudo ./install_centreon.sh
+```
 
-# ⚙️ Fonctionnalités
+## ⚙️ Fonctionnalités
 
 - ✅ Installation complète de Centreon 24.10
 - ✅ Configuration MariaDB avec sécurisation
@@ -28,53 +32,80 @@ sudo ./install_centreon.sh
 - ✅ Installation des plugins de supervision
 - ✅ Configuration réseau optimisée
 
-# 🔧 Configuration Post-Installation
+## 🔧 Configuration Post-Installation
 
-**Interface Web:** Accédez à http://[IP-SERVEUR]/centreon
-- Utilisateur: admin
-- Mot de passe: AdminPassword123!
+1. **Interface Web**: Accédez à `http://[IP-SERVEUR]/centreon`
+2. **Identifiants par défaut**:
+   - Utilisateur: `admin`
+   - Mot de passe: `AdminPassword123!`
+3. **Base de données**: 
+   - Utilisateur root: `root`
+   - Mot de passe: `MotDePasseSecurise123!`
 
-**Base de données:**
-- Utilisateur root: root
-- Mot de passe: MotDePasseSecurise123!
+## 📖 Guide d'Utilisation
 
-# 📖 Guide d'Utilisation
-1. Assistant Web
-- Suivez l'assistant d'installation web avec les paramètres pré-configurés du script.
-2. Export de Configuration
-- Après ajout d'hôtes, exportez toujours la configuration :
+### 1. Assistant Web
+Suivez l'assistant d'installation web avec les paramètres pré-configurés du script.
 
-- Configuration > Collecteurs > Collecteurs
+### 2. Export de Configuration
+Après ajout d'hôtes, exportez toujours la configuration :
+- `Configuration > Collecteurs > Collecteurs`
 - Sélectionner "Central" → "Exporter la configuration"
 
-3. Supervision SNMP
-- Le serveur est pré-configuré pour s'auto-superviser :
+### 3. Supervision SNMP
+Le serveur est pré-configuré pour s'auto-superviser :
+- Communauté SNMP: `public`
+- Port: `161/UDP`
 
-**Communauté SNMP:** public
-- Port: 161/UDP
+## 🛠️ Personnalisation
 
-# 🛠️ Personnalisation
-_ Modifiez les variables en début de script :
+Modifiez les variables en début de script :
 
-bashHOSTNAME="central"                          # Nom du serveur
+```bash
+HOSTNAME="central"                          # Nom du serveur
 DB_ROOT_PASSWORD="VotreMotDePasse"         # Mot de passe MariaDB
 CENTREON_ADMIN_USER="admin"                # Utilisateur admin
 CENTREON_ADMIN_PASSWORD="VotrePassword"    # Mot de passe admin
+```
 
-# 🔍 Vérification
-- Vérifiez que tous les services sont actifs :
-bashsudo systemctl status apache2 mariadb centreon cbd centengine
+## 🔍 Vérification
 
-# 🚨 Sécurité
-⚠️ Important: Ce script désactive temporairement le pare-feu. Réactivez-le après installation :
+Vérifiez que tous les services sont actifs :
 
-bashsudo systemctl enable ufw && sudo systemctl start ufw
+```bash
+sudo systemctl status apache2 mariadb centreon cbd centengine
+```
+
+## 🚨 Sécurité
+
+⚠️ **Important**: Ce script désactive temporairement le pare-feu. Réactivez-le après installation :
+
+```bash
+sudo systemctl enable ufw && sudo systemctl start ufw
 sudo ufw allow 80/tcp    # Interface web Centreon
 sudo ufw allow 161/udp   # SNMP
+```
 
-# 📚 Documentation
-- Documentation officielle Centreon
-- Guide SNMP Linux
+## 📚 Documentation
 
-# 📄 Licence
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+- [Documentation officielle Centreon](https://docs.centreon.com/)
+- [Guide SNMP Linux](http://www.net-snmp.org/)
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à :
+- Signaler des bugs
+- Proposer des améliorations
+- Soumettre des pull requests
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## 👨‍💻 Auteur
+
+Basé sur le TP d'autoformation réseau IP - Installation et configuration Centreon
+
+---
+
+**⭐ Si ce script vous a été utile, n'hésitez pas à mettre une étoile !**
