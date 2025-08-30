@@ -1,6 +1,7 @@
-🖥️ Script d'Installation Autonome Centreon
+# 🖥️ Script d'Installation Autonome Centreon
 Un script Bash automatisé pour installer et configurer Centreon sur Debian 12 avec MariaDB local.
-📋 Prérequis
+
+# 📋 Prérequis
 
 OS: Debian 12 (Bookworm)
 RAM: Minimum 4 GB recommandés
@@ -8,7 +9,7 @@ Espace disque: Au moins 20 GB libres
 Accès: Privilèges sudo
 Réseau: Connexion Internet active
 
-🚀 Installation Rapide
+# 🚀 Installation Rapide
 bash# Télécharger le script
 wget https://raw.githubusercontent.com/[votre-username]/centreon-auto-install/main/install_centreon.sh
 
@@ -17,7 +18,8 @@ chmod +x install_centreon.sh
 
 # Lancer l'installation
 sudo ./install_centreon.sh
-⚙️ Fonctionnalités
+
+# ⚙️ Fonctionnalités
 
 ✅ Installation complète de Centreon 24.10
 ✅ Configuration MariaDB avec sécurisation
