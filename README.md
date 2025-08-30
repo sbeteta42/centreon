@@ -3,14 +3,14 @@ Un script Bash automatisé pour installer et configurer Centreon sur Debian 12 a
 
 # 📋 Prérequis
 
-OS: Debian 12 (Bookworm)
-RAM: Minimum 4 GB recommandés
-Espace disque: Au moins 20 GB libres
-Accès: Privilèges sudo
-Réseau: Connexion Internet active
+**OS:** Debian 12 (Bookworm)
+**RAM:** Minimum 1 GB recommandé
+**Espace disque:** Au moins 20 GB libres
+**Accès:** Privilèges sudo ou root
+**Réseau:** Connexion Internet active
 
 # 🚀 Installation Rapide
-bash# Télécharger le script
+
 wget https://raw.githubusercontent.com/[votre-username]/centreon-auto-install/main/install_centreon.sh
 
 # Rendre exécutable
@@ -28,23 +28,17 @@ sudo ./install_centreon.sh
 ✅ Installation des plugins de supervision
 ✅ Configuration réseau optimisée
 
-🔧 Configuration Post-Installation
+# 🔧 Configuration Post-Installation
 
-Interface Web: Accédez à http://[IP-SERVEUR]/centreon
-Identifiants par défaut:
-
+**Interface Web:** Accédez à http://[IP-SERVEUR]/centreon
 Utilisateur: admin
 Mot de passe: AdminPassword123!
 
-
 Base de données:
-
 Utilisateur root: root
 Mot de passe: MotDePasseSecurise123!
 
-
-
-📖 Guide d'Utilisation
+# 📖 Guide d'Utilisation
 1. Assistant Web
 Suivez l'assistant d'installation web avec les paramètres pré-configurés du script.
 2. Export de Configuration
