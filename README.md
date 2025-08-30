@@ -5,7 +5,7 @@ Un script Bash automatisé pour installer et configurer Centreon sur Debian 12 a
 ## 📋 Prérequis
 
 - **OS**: Debian 12 (Bookworm)
-- **RAM**: Minimum 4 GB recommandés
+- **RAM**: Minimum 1 GB recommandé
 - **Espace disque**: Au moins 20 GB libres
 - **Accès**: Privilèges sudo
 - **Réseau**: Connexion Internet active
@@ -91,21 +91,6 @@ sudo ufw allow 161/udp   # SNMP
 - [Documentation officielle Centreon](https://docs.centreon.com/)
 - [Guide SNMP Linux](http://www.net-snmp.org/)
 
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-- Signaler des bugs
-- Proposer des améliorations
-- Soumettre des pull requests
-
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 👨‍💻 Auteur
-
-Basé sur le TP d'autoformation réseau IP - Installation et configuration Centreon
-
----
-
-**⭐ Si ce script vous a été utile, n'hésitez pas à mettre une étoile !**
