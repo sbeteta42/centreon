@@ -3,11 +3,11 @@ Un script Bash automatisé pour installer et configurer Centreon sur Debian 12 a
 
 # 📋 Prérequis
 
-**OS:** Debian 12 (Bookworm)
-**RAM:** Minimum 1 GB recommandé
-**Espace disque:** Au moins 20 GB libres
-**Accès:** Privilèges sudo ou root
-**Réseau:** Connexion Internet active
+- **OS:** Debian 12 (Bookworm)
+- **RAM:** Minimum 1 GB recommandé
+- **Espace disque:** Au moins 20 GB libres
+- **Accès:** Privilèges sudo ou root
+- **Réseau:** Connexion Internet active
 
 # 🚀 Installation Rapide
 
