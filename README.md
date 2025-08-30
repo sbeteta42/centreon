@@ -21,12 +21,12 @@ sudo ./install_centreon.sh
 
 # ⚙️ Fonctionnalités
 
-✅ Installation complète de Centreon 24.10
-✅ Configuration MariaDB avec sécurisation
-✅ Activation automatique des services
-✅ Configuration SNMP pour auto-supervision
-✅ Installation des plugins de supervision
-✅ Configuration réseau optimisée
+- ✅ Installation complète de Centreon 24.10
+- ✅ Configuration MariaDB avec sécurisation
+- ✅ Activation automatique des services
+- ✅ Configuration SNMP pour auto-supervision
+- ✅ Installation des plugins de supervision
+- ✅ Configuration réseau optimisée
 
 # 🔧 Configuration Post-Installation
 
